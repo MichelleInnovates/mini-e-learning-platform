@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub - E-Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 LearnHub</h1>
+            <p class="tagline">Your journey to knowledge starts here</p>
+        </header>
+
+        <!-- Home Page -->
+        <div id="homePage">
+            <div class="course-grid" id="courseGrid"></div>
+        </div>
+
+        <!-- Course Detail Page -->
+        <div id="courseDetailPage" class="hidden">
+            <div class="course-detail">
+                <button class="btn back-btn" onclick="showHomePage()">← Back to Courses</button>
+                
+                <div class="course-header">
+                    <h2 id="courseTitle"></h2>
+                    <p id="courseDescription"></p>
+                </div>
+
+                <div>
+                    <h3>Your Progress</h3>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="progressBar">0%</div>
+                    </div>
+                </div>
+
+                <div class="lessons-list">
+                    <h3>Lessons</h3>
+                    <div id="lessonsList"></div>
+                </div>
+
+                <button class="btn btn-success complete-course-btn" id="completeCourseBtn" onclick="completeCourse()">
+                    Mark Course as Completed
+                </button>
+
+                <div id="statusMessage" class="hidden status-message"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
